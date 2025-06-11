@@ -1,0 +1,32 @@
+SARC18 Instruction Set Architecture
+
+Type | OPCODE
+-------------
+  R      00
+  I      01
+  J      11
+
+
+R-Type Instructions
+-------------------
+  Format : [00][4-bit Func][4-bit rd][4-bit rs][4-bit rt]
+
+  OPCODE |  Func | Operation
+  --------------------------
+   0000	 |  ADD  |	Addition
+   0001	 |  SUB  |	Subtraction
+   0010	 |	MUL  |	Multiplication
+   0011	 |	DIV  |	Division
+   0100	 |	AND  |	Bitwise AND
+   0101	 |	OR   |	Bitwise OR
+   0110	 |	XOR  |	Bitwise XOR
+   0111	 |	NAND |	Bitwise NAND
+   1000	 |	NOR  |	Bitwise NOT
+   1001	 |	MOD  |	Modulo
+   1010	 |	SLL  |	Shift Left Logical
+   1011	 |	SRL  |	Shift Right Logical
+   1100	 |		
+   1101	 |	Maybe will support Artihmetic Shifts ?
+   1110	 |
+   1111  |
+  
