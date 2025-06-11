@@ -1,15 +1,15 @@
 SARC18 Instruction Set Architecture
 
-Type | OPCODE
--------------
-  R      00
-  I      01
-  J      11
+ Type  |  OPCODE
+----------------
+  R    |   00
+  I    |   01
+  J    |   11
 
 
 R-Type Instructions
 -------------------
-  Format : [00][4-bit Func][4-bit rd][4-bit rs][4-bit rt]
+  Format : [00][4-bit Func][4-bit RD][4-bit RS][4-bit RT]
 
   OPCODE |  Func | Operation
   --------------------------
@@ -21,7 +21,7 @@ R-Type Instructions
    0101	 |	OR   |	Bitwise OR
    0110	 |	XOR  |	Bitwise XOR
    0111	 |	NAND |	Bitwise NAND
-   1000	 |	NOR  |	Bitwise NOT
+   1000	 |	NOR  |	Bitwise NOR
    1001	 |	MOD  |	Modulo
    1010	 |	SLL  |	Shift Left Logical
    1011	 |	SRL  |	Shift Right Logical
@@ -30,3 +30,8 @@ R-Type Instructions
    1110	 |
    1111  |
   
+  
+
+I-Type Instructions
+-------------------
+  Format : [01][4-bit Func][4-bit RD][8-bit Immediate Value]
