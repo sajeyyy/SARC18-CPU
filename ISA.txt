@@ -27,7 +27,7 @@ R-Type Instructions
    1011	 |	SRL  |	Shift Right Logical
    1100	 |
    1101	 |	Maybe will support Artihmetic Shifts ?
-   1110	 |  
+   1110	 |
    1111  |
 
 
