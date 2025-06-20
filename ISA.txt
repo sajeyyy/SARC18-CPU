@@ -11,7 +11,7 @@ R-Type Instructions
 -------------------
   Format : [00][4-bit Func][4-bit RD][4-bit RS][4-bit RT]
 
-  OPCODE |  Func | Operation
+  Opcode |  Func | Operation
   --------------------------
    0000	 |  ADD  |	Addition
    0001	 |  SUB  |	Subtraction
@@ -25,13 +25,39 @@ R-Type Instructions
    1001	 |	MOD  |	Modulo
    1010	 |	SLL  |	Shift Left Logical
    1011	 |	SRL  |	Shift Right Logical
-   1100	 |		
+   1100	 |
    1101	 |	Maybe will support Artihmetic Shifts ?
    1110	 |
    1111  |
-  
-  
+
+
 
 I-Type Instructions
 -------------------
-  Format : [01][4-bit Func][4-bit RD][8-bit Immediate Value]
+  Format : [01][4-bit Func][4-bitc RD][8-bit Destination Address]
+
+   Func |  Func | Operation
+  --------------------------
+   0000	 | STR  | Store Reg to Mem
+   0001  | LDR  | Load Mem to Reg
+   0010  | 
+
+J-Type Instructions
+-------------------
+  Format : [11][16-Bit Jump Address]
+
+
+
+ Test Cases
+#----------#
+
+	Test 1 (Store 2 Values in %R1 and %R2, Add %R2 and $R3 store in %R3, Loop)
+	------
+	STR, %R1, 0x01     | 01 0000 0001 0000 0001  | 10101
+	STR, %R2, 0x02     | 01 0000 0010 0000 0010  | 10202 
+	ADD, %R3, %R3, %R2 | 00 0000 0011 0011 0010  | 00332
+	JMP 0x02		   | 11 0000 0000 0000 0010  | 30002
+	
+	=> 10101 10202 00332 30002
+
+
