@@ -1,8 +1,8 @@
 ----------------------------------------------------------------------------------
--- File        : program_counter.vhd
+-- File        : alu.vhd
 -- Author      : Saje Cowell
 --
--- Description : Program Counter for the CPU which is a basic DFF
+-- Description : ALU Component which takes 2 inputs and performs the selected Artithmetic operation on the 2 and outputs the result
 --
 --
 -- Inputs      : in1 - Value 1 to perform operation on
