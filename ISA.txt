@@ -51,13 +51,13 @@ J-Type Instructions
  Test Cases
 #----------#
 
-	Test 1 (Store 2 Values in %R1 and %R2, Add %R2 and $R3 store in %R3, Loop)
+	Test 1 (Store 2 Values in %R1 and %R2, Add %R2 and $R3 store in %R3, Loop to Add Instruction)
 	------
 	STR, %R1, 0x01     | 01 0000 0001 0000 0001  | 10101
 	STR, %R2, 0x02     | 01 0000 0010 0000 0010  | 10202 
 	ADD, %R3, %R3, %R2 | 00 0000 0011 0011 0010  | 00332
 	JMP 0x02		   | 11 0000 0000 0000 0010  | 30002
 	
-	=> 10101 10202 00332 30002
+	HEX PROGRAM => 10101 10202 00332 30002
 
 
