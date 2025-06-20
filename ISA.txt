@@ -13,22 +13,22 @@ R-Type Instructions
 
   Opcode |  Func | Operation
   --------------------------
-   0000	 |  ADD  |	Addition
-   0001	 |  SUB  |	Subtraction
-   0010	 |	MUL  |	Multiplication
-   0011	 |	DIV  |	Division
+   0000	 |  ADD  |	Addition (Signed)
+   0001	 |  SUB  |	Subtraction (Signed)
+   0010	 |	MUL  |	Multiplication (Signed)
+   0011	 |	DIV  |	Division (Signed)
    0100	 |	AND  |	Bitwise AND
    0101	 |	OR   |	Bitwise OR
    0110	 |	XOR  |	Bitwise XOR
    0111	 |	NAND |	Bitwise NAND
-   1000	 |	NOR  |	Bitwise NOR
-   1001	 |	MOD  |	Modulo
+   1000	 |	MOD  |	Modulo (Signed)
+   1001	 |	CMP  |	Compare (Signed)
    1010	 |	SLL  |	Shift Left Logical
    1011	 |	SRL  |	Shift Right Logical
-   1100	 |
-   1101	 |	Maybe will support Artihmetic Shifts ?
-   1110	 |
-   1111  |
+   1100	 |  ADDU |	Addition (Unsigned)
+   1101	 |  SUBU |	Subtraction (Unsigned)
+   1110	 |  CMPU |  Compare (Unsigned)
+   1111  | 
 
 
 
