@@ -1,2 +1,10 @@
 .RISC16_Saje.circ.autosave
 .DS_Store
+vivado_project/.Xil/
+vivado_project/*.cache/
+vivado_project/*.hw/
+vivado_project/*.ip_user_files/
+vivado_project/*.runs/
+vivado_project/*.sim/
+vivado_project/*.log
+vivado_project/*.jou
