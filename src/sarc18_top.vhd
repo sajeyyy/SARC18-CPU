@@ -27,6 +27,23 @@ end sarc18_top;
 
 architecture Behavioral of sarc18_top is
 
+    component alu is
+        Port( 
+               in1 : in STD_LOGIC_VECTOR (15 downto 0);
+               in2 : in STD_LOGIC_VECTOR (15 downto 0);
+               op_sel : in STD_LOGIC_VECTOR (3 downto 0);
+               alu_result : out STD_LOGIC_VECTOR (15 downto 0));
+    end component alu;
+
+    component program_counter is
+        Port ( 
+               clk : in STD_LOGIC;
+               rst : in STD_LOGIC;
+               next_pc : in std_logic_vector(7 downto 0); -- Next PC
+               pc_out : out std_logic_vector(7 downto 0) -- Updated PC
+              );
+    end component program_counter;
+
 begin
 
 
