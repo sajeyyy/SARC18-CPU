@@ -11,7 +11,7 @@ R-Type Instructions
 -------------------
   Format : [00][4-bit Func][4-bit RD][4-bit RS][4-bit RT]
 
-  Opcode |  Func | Operation
+   Func  | Instr | Operation
   --------------------------
    0000	 |  ADD  |	Addition (Signed)
    0001	 |  SUB  |	Subtraction (Signed)
@@ -34,21 +34,35 @@ R-Type Instructions
 
 I-Type Instructions
 -------------------
-  Format : [01][4-bit Func][4-bitc RD][8-bit Destination Address]
+   Format : [01][4-bit Func][4-bit RD][8-bit Immediate/Address]
 
-   Func |  Func | Operation
-  --------------------------
-   0000	 | STR  | Store Reg to Mem
-   0001  | LDR  | Load Mem to Reg
-   0010  | 
+   Func  | Instr | Operation
+   -----------------------------
+   0000  |  STR  | Store RD to memory[IMM]
+   0001  |  LDR  | Load memory[IMM] into RD
+   0010  |  ADDI | RD = RD + IMM (Signed)
+   0011  |  SUBI | RD = RD - IMM (Signed)
+   0100  |  MOVI | RD = IMM
+0101–1111|   ~   | Reserved
+
+
 
 J-Type Instructions
 -------------------
-  Format : [11][16-Bit Jump Address]
+   Format : [11][4-bit Cond][4-bit RS][8-bit JMP_ADDR]
+
+   Cond  |   OP   | Operation
+   ----------------------------
+   0000  |  BEQZ  | If RS == 0, jump to JMP_ADDR
+   0001  |  BNEZ  | If RS != 0, jump to JMP_ADDR
+   0010  |  BLTZ  | If RS < 0, jump to JMP_ADDR
+   0011  |  BGEZ  | If RS >= 0, jump to JMP_ADDR
+   0100  |  JMP   | Unconditional jump to JMP_ADDR
+0101–1111|   ~    | Reserved
 
 
 
- Test Cases
+Hex/Binary Test Cases
 #----------#
 
 	Test 1 (Store 2 Values in %R1 and %R2, Add %R2 and $R3 store in %R3, Loop to Add Instruction)
