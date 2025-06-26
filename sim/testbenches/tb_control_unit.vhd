@@ -1,4 +1,3 @@
-
 -- Testbench for control_unit.vhd
 -- Author: Saje Cowell
 
@@ -18,7 +17,7 @@ architecture behavior of tb_control_unit is
     signal mem_en_read   : std_logic;
     signal mem_en_write  : std_logic;
     signal reg_en_write  : std_logic;
-
+    
     component control_unit
         Port ( 
             op_func       : in std_logic_vector(5 downto 0);
@@ -45,35 +44,35 @@ begin
 
     stim_proc: process
     begin
-        -- R-Type (e.g., ADD)
+        -- R-Type ADD
         op_func <= "000000";
         wait for 10 ns;
 
-        -- I-Type (e.g., STR)
+        -- I-Type STR
         op_func <= "010000";
         wait for 10 ns;
 
-        -- I-Type (e.g., LDR)
+        -- I-Type LDR
         op_func <= "010001";
         wait for 10 ns;
 
-        -- I-Type (e.g., ADDI)
+        -- I-Type ADDI
         op_func <= "010010";
         wait for 10 ns;
 
-        -- I-Type (e.g., SUBI)
+        -- I-Type SUBI
         op_func <= "010011";
         wait for 10 ns;
 
-        -- I-Type (e.g., MOVI)
+        -- I-Type MOVI
         op_func <= "010100";
         wait for 10 ns;
 
-        -- J-Type (e.g., BEQZ)
+        -- J-Type BEQZ
         op_func <= "110000";
         wait for 10 ns;
 
-        -- Undefined opcode
+        -- Undefined
         op_func <= "100000";
         wait for 10 ns;
 
