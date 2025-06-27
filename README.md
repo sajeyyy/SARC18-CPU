@@ -28,6 +28,8 @@ Full details in [ISA.txt](./ISA.txt)
 
 ## Project Structure
 
+<pre>
+```text
 SARC18-CPU/
 ├── ISA.txt
 ├── README.md
@@ -49,7 +51,9 @@ SARC18-CPU/
 ├── constraints/
 │   └── sarc18.xdc
 │
-└── vivado_project/    # (Vivado XPR file, Ignored by Git)
+└── vivado_project/   # (Vivado XPR file, ignored by Git)
+```
+</pre>
 
 ---
 
