@@ -29,7 +29,7 @@ Full details in [ISA.txt](./ISA.txt)
 ## Project Structure
 
 <pre>
-```text
+```
 SARC18-CPU/
 ├── ISA.txt
 ├── README.md
