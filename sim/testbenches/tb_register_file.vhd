@@ -1,4 +1,4 @@
--- Testbench for control_unit.vhd
+-- Testbench for register_file.vhd
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
@@ -72,18 +72,15 @@ begin
     write_addr <= "0010";
     write_data <= x"AAAA";
     wait for CLK_PERIOD;
-    wait for CLK_PERIOD;  -- <-- extra wait for signal to register
 
     -- Write 0x1234 to register 7
     write_addr <= "0111";
     write_data <= x"1234";
     wait for CLK_PERIOD;
-    wait for CLK_PERIOD;
 
     -- Write 0xBEEF to register 12
     write_addr <= "1100";
     write_data <= x"BEEF";
-    wait for CLK_PERIOD;
     wait for CLK_PERIOD;
 
     -- Disable write
