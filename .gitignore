@@ -12,3 +12,9 @@ vivado_project/
 *.sim/
 *.webtalk/
 /vivado_project
+
+/ip/**/sim/
+/ip/**/simulation/
+/ip/**/doc/
+/ip/**/misc/
+/ip/**/hdl/
