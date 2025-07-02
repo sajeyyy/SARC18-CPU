@@ -71,7 +71,25 @@ Each component has been tested using VHDL testbenches. All waveform screenshots 
 
 ## Inspiration
 
-This project was originally inspired by the game *Turing Complete* and my *Ad and grew into a deeper exploration of real-world hardware design. Every module—from the program counter to the control unit—was built from scratch in VHDL. Logisim was used briefly for early prototyping, but all logic is now FPGA-ready and written in a hardware description language.
+This project was originally inspired by the game *Turing Complete* and my University classes (Computer Architecture and Digital Hardware Design) which grew into a deeper exploration of real-world hardware design. Every module—from the program counter to the control unit—was built from scratch in VHDL. Logisim was used briefly for early prototyping, but all logic is now FPGA-ready and written in VHDL.
+
+---
+
+## IP Core Regeneration (RAM & ROM)
+
+This project includes Vivado IP cores for ROM (instruction memory) and RAM (register memory). Only the `.xci` core descriptor files are tracked in Git.
+
+If you're cloning the project for the first time and want to simulate or synthesize it:
+
+1. Open the Vivado project:
+   ```bash
+   vivado vivado_project/vivado_project.xpr
+   ```
+
+2. In the Sources panel, right-click each `.xci` file (under `ip/RAM` and `ip/ROM`) and choose:  
+   **"Generate Output Products"** → Ensure “Synthesis” is checked → Click OK.
+
+This will regenerate the required `*.vhd` and netlist files inside `.gen/` and `.srcs/`, allowing the IPs to be included in synthesis and simulation.
 
 ---
 
@@ -79,4 +97,5 @@ This project was originally inspired by the game *Turing Complete* and my *Ad an
 
 - Vivado 2025.1
 - VHDL
-- GitHub for version control
+- GitHub
+- Logisim for Prototyping

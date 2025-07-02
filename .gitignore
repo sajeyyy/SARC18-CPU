@@ -18,3 +18,5 @@ vivado_project/
 /ip/**/doc/
 /ip/**/misc/
 /ip/**/hdl/
+.idea/workspace.xml
+/.idea
